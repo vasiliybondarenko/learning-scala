@@ -12,7 +12,8 @@ object CollectionsExamples extends App {
     .sliding(2, 2)
     .toList //List(ArraySeq(1, 2), ArraySeq(3, 4), ArraySeq(5, 6), ArraySeq(7, 8), ArraySeq(9, 10)
 
-  (1 to 10).sliding(2) //List(ArraySeq(1, 2), ArraySeq(2, 3), ArraySeq(3, 4), ArraySeq(4, 5), ArraySeq(5, 6), ArraySeq(6, 7), ArraySeq(7, 8), ArraySeq(8, 9), ArraySeq(9, 10))
+  ((1 to 10)
+    .sliding(2)) //List(ArraySeq(1, 2), ArraySeq(2, 3), ArraySeq(3, 4), ArraySeq(4, 5), ArraySeq(5, 6), ArraySeq(6, 7), ArraySeq(7, 8), ArraySeq(8, 9), ArraySeq(9, 10))
 
   //partitioning
   (1 to 10)
