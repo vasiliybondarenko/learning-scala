@@ -94,6 +94,14 @@ object CollectionsExamples extends App {
   Set(1, 2, 3)(1) //true
   Set(1, 2, 3)(0) //false
 
+  //parallel collections:
+  /*
+    //won't compile for scala 2.13,
+    for 2.13 see https://index.scala-lang.org/scala/scala-parallel-collections/scala-parallel-collections/1.0.2
+    List(1, 2, 3).par.foreach { x =>
+    ???
+  }
+   */
   //todo: see also
   // https://docs.scala-lang.org/overviews/collections-2.13/performance-characteristics.html
   // https://docs.scala-lang.org/overviews/collections-2.13/trait-iterable.html
