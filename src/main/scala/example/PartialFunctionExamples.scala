@@ -1,5 +1,7 @@
 package example
 
+import scala.math.sqrt
+
 /**
   * Created by Bondarenko on Feb, 22, 2020
   * 22:18.
@@ -18,6 +20,14 @@ object PartialFunctionExamples extends App with NumOps {
   //2.0
   //3.0
   //4.0
+
+  //the same:
+  println("collect:")
+  numbers
+    .collect {
+      case x if x >= 0 => sqrt(x)
+    }
+    .foreach(println)
 
   println("map:")
   //selects ALL values and computes square roots on its
@@ -48,7 +58,7 @@ trait NumOps {
   def sqrtFunc(x: Double): Double = sqrt(x)
 
   //the same!
-  val sqrtFuncDesugared = new Function1[Double, Double] {
+  val sqrtFuncDesugared = new ((Double) => Double) {
     def apply(x: Double): Double = sqrt(x)
   }
 
