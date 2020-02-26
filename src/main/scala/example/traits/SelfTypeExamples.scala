@@ -1,5 +1,6 @@
 package example.traits
 
+import java.util.Scanner
 import scala.io.Source
 
 /**
@@ -9,8 +10,12 @@ import scala.io.Source
   */
 object SelfTypeExamples extends App {
 
+  println("console calculator:")
+  println("input an expression: ('q' for exit)")
+  val calculator0 = new Calculator with Parser with ConsoleInput {}
+  calculator0.calculateAll.foreach(println)
+
   println("calculator1:")
-  //creating an instance of Calculator with
   val calculator1 = new Calculator with Parser with SimpleInput {}
   calculator1.calculateAll.foreach(println)
 
@@ -22,6 +27,14 @@ object SelfTypeExamples extends App {
 
 trait Input {
   def expressions: LazyList[String]
+}
+
+trait ConsoleInput extends Input {
+
+  def expressions: LazyList[String] = {
+    val sc = new Scanner(System.in)
+    LazyList.continually(sc.next()).takeWhile(!_.contains('q'))
+  }
 }
 
 trait SimpleInput extends Input {
