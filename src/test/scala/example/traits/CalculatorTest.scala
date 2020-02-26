@@ -15,7 +15,7 @@ class CalculatorTest extends AnyFlatSpec with Matchers {
         LazyList("12*5", "12+5", "12-5", "12/5")
     }
 
-    val calc = new Calculator with Parser with TestInput
+    val calc = new CalculatorWithDefaultParser with TestInput
 
     calc.calculateAll shouldBe (
       LazyList(60, 17, 7, 2)

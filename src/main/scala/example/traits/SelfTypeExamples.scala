@@ -12,15 +12,15 @@ object SelfTypeExamples extends App {
 
   println("console calculator:")
   println("input an expression: ('q' for exit)")
-  val calculator0 = new Calculator with Parser with ConsoleInput {}
+  val calculator0 = new CalculatorWithDefaultParser with ConsoleInput {}
   calculator0.calculateAll.foreach(println)
 
   println("calculator1:")
-  val calculator1 = new Calculator with Parser with SimpleInput {}
+  val calculator1 = new CalculatorWithDefaultParser with SimpleInput {}
   calculator1.calculateAll.foreach(println)
 
   println("calculator2:")
-  val calculator2 = new Calculator with Parser with FileInput {}
+  val calculator2 = new CalculatorWithDefaultParser with FileInput {}
   calculator2.calculateAll.foreach(println)
 
 }
@@ -50,6 +50,10 @@ trait FileInput extends Input {
 }
 
 trait Parser {
+  def parse(s: String): Option[(String, String, String)]
+}
+
+trait DefaultParser extends Parser {
 
   private val exprPattern = "(-?[0-9]+)([*\\-+/])([0-9]+)".r
 
@@ -78,4 +82,8 @@ trait Calculator {
   def calculateAll: LazyList[Int] =
     expressions.map(calculateExpr).collect { case Some(value) => value }
 
+}
+
+trait CalculatorWithDefaultParser extends Calculator with DefaultParser {
+  self: Input =>
 }
