@@ -1,11 +1,11 @@
 package example
 
-import org.scalatest._
+import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import scala.util
 import scala.util.{Failure, Success}
 
-class HelloSpec extends FlatSpec with Matchers {
+class HelloSpec extends AnyFlatSpec with Matchers {
 
   //todo: add errors handling tests
   "TryExamples" should "read and parse data from CVS file" in {
