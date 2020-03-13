@@ -1,10 +1,10 @@
 package example
 
 /**
-  * Created by Bondarenko on Jan, 30, 2020
+ * Created by Bondarenko on Jan, 30, 2020
  15:39.
  Project: learning-fp
-  */
+ */
 object CollectionsExamples extends App {
 
   //sliding

@@ -12,7 +12,7 @@ The concept is found in specification languages and functional programming langu
 Algebraic data types can be emulated in Scala with case classes.
 
 https://docs.scala-lang.org/glossary/#algebraic-data-type
-  */
+ */
 object EitherExamples extends App {
 
   def parseInt(s: String): Either[String, Int] = Try(s.toInt).toEither.fold(

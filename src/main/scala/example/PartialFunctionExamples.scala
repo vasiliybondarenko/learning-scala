@@ -3,10 +3,10 @@ package example
 import scala.math.sqrt
 
 /**
-  * Created by Bondarenko on Feb, 22, 2020
-  * 22:18.
-  * Project: learning-fp
-  */
+ * Created by Bondarenko on Feb, 22, 2020
+ * 22:18.
+ * Project: learning-fp
+ */
 object PartialFunctionExamples extends App with NumOps {
 
   //see https://www.scala-lang.org/api/2.12.8/scala/PartialFunction.html

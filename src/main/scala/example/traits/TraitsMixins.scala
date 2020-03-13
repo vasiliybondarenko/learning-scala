@@ -3,10 +3,10 @@ package example.traits
 import scala.collection.mutable.ArrayBuffer
 
 /**
-  * Created by Bondarenko on Feb, 24, 2020
+ * Created by Bondarenko on Feb, 24, 2020
  14:11.
  Project: learning-fp
-  */
+ */
 object TraitsMixins extends App {
 
   println("q1:")

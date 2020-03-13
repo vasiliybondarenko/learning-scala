@@ -4,10 +4,10 @@ import scala.io.Source
 import scala.util.{Failure, Try}
 
 /**
-  * Created by Bondarenko on Jan, 30, 2020
-  * 12:57.
-  * Project: learning-fp
-  */
+ * Created by Bondarenko on Jan, 30, 2020
+ * 12:57.
+ * Project: learning-fp
+ */
 object TryExamples extends App {
 
   case class Item(id: Long, name: String, description: Option[String])

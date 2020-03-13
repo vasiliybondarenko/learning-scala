@@ -4,10 +4,10 @@ import java.util.Scanner
 import scala.io.Source
 
 /**
-  * Created by Bondarenko on Feb, 25, 2020
-  * 11:42.
-  * Project: learning-fp
-  */
+ * Created by Bondarenko on Feb, 25, 2020
+ * 11:42.
+ * Project: learning-fp
+ */
 object SelfTypeExamples extends App {
 
   println("console calculator:")
