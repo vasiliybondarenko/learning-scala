@@ -1,11 +1,16 @@
-package example
+package example.extractors
 
 /**
  * Created by Bondarenko on Mar, 13, 2020
- 21:22.
- Project: learning-fp
+ * 21:22.
+ * Project: learning-fp
  */
-object Extractors extends App {}
+object EmailExtractor extends App {
+  "xxxxx@gmail.com" match {
+    case EMail(user, domain) => println(s"user: $user, domain: $domain")
+    case _ => println("It's not a valid email!")
+  }
+}
 
 object EMail {
 
